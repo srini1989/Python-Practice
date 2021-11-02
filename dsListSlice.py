@@ -8,4 +8,3 @@ print( Q1);
 print(Q2);
 print(Q3);
 print(Q4);
-
