@@ -35,5 +35,18 @@ class Box:
                     self.width + self.depth *
                     self.width + self.depth)
 
-        def describe():
-            print("Hey, I am box! with volume {}mm, and surface are {}mm.".format(self.volume(), self.surface_area()))
+    def describe(self):
+        print("Hey, I am box! with volume {}mm, and surface are {}mm.".format(self.volume(), self.surface_area()))
+
+    def compare(self, other_box):
+        """
+        Compares two boxes in the following way
+        somebox.compare(otherbox)
+        """
+        volume1 = self.volume()
+        volume2 = other_box.volume()
+        difference_volume = volume1 - volume2
+        if difference_volume > 0:
+            print("{} bigger than {}".format((self, other_box)))
+        else:
+            print("{} bigger than {}".format(other_box, self))
